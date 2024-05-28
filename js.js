@@ -66,5 +66,17 @@ document.querySelector("#clc").addEventListener("click", function () {
   height = document.getElementById("height").value;
   bmi = weight / (height * height);
   document.getElementById("bmi").innerHTML = bmi;
+    let state = "";
+  if (bmi < 18.5) {
+    state = "thin";
+    } else if (bmi >= 18.5 && bmi < 25) {
+        state = "normal";
+    } else if (bmi >= 25 && bmi < 30) {
+        state = "overweight";
+    } else {
+        state = "obese";
+    }
+    document.getElementById("bmistate").innerHTML = state;
+
   console.log(`your BMI is ${bmi}`);
 });
