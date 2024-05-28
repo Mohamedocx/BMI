@@ -61,22 +61,70 @@
 // let height = document.getElementById("height").value;
 // let bmi;
 
-document.querySelector("#clc").addEventListener("click", function () {
-  weight = document.getElementById("weight").value;
-  height = document.getElementById("height").value;
-  bmi = weight / (height * height);
-  document.getElementById("bmi").innerHTML = bmi;
-    let state = "";
-  if (bmi < 18.5) {
-    state = "thin";
-    } else if (bmi >= 18.5 && bmi < 25) {
-        state = "normal";
-    } else if (bmi >= 25 && bmi < 30) {
-        state = "overweight";
-    } else {
-        state = "obese";
-    }
-    document.getElementById("bmistate").innerHTML = state;
+// document.querySelector("#clc").addEventListener("click", function () {
+//   weight = document.getElementById("weight").value;
+//   height = document.getElementById("height").value;
+//   bmi = weight / (height * height);
+//   document.getElementById("bmi").innerHTML = bmi;
+//     let state = "";
+//   if (bmi < 18.5) {
+//     state = "thin";
+//     } else if (bmi >= 18.5 && bmi < 25) {
+//         state = "normal";
+//     } else if (bmi >= 25 && bmi < 30) {
+//         state = "overweight";
+//     } else {
+//         state = "obese";
+//     }
+//     document.getElementById("bmistate").innerHTML = state;
 
-  console.log(`your BMI is ${bmi}`);
+//   console.log(`your BMI is ${bmi}`);
+// });
+
+    
+  
+   var arr = [];
+    
+
+document.getElementById("add").addEventListener("click", function () {
+    var names = document.getElementById("name").value;
+    arr.push(names);
+    document.getElementById("list").innerHTML = arr;
+    var names = document.getElementById("name").value = ""; // Clear the input field
+
 });
+
+document.getElementById("del").addEventListener("click", function () {
+    var names = document.getElementById("name").value;
+    arr.pop(names);
+    document.getElementById("list").innerHTML = arr;
+});
+
+
+//   });
+
+// document.getElementById("add").addEventListener("click", function () {
+//     var newName = document.getElementById("name").value.trim();
+//     if (newName !== "") {
+//       var existingNames = document.getElementById("list").textContent.trim();
+//       var arr = existingNames ? existingNames.split(", ") : [];
+//       arr.push(newName);
+//       document.getElementById("list").textContent = arr.join(", ");
+//       document.getElementById("name").value = ""; // Clear the input field
+//     }
+//   });
+  
+//   document.getElementById("del").addEventListener("click", function () {
+//     var existingNames = document.getElementById("list").textContent.trim();
+//     if (existingNames !== "") {
+//       var arr = existingNames.split(", ");
+//       arr.pop(); // Remove the last item
+//       document.getElementById("list").textContent = arr.join(", ");
+//     } else {
+//       document.getElementById("list").textContent = ""; // Clear the list if it's empty
+//     }
+//   });
+  
+  
+  
+  
